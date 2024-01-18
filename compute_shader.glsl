@@ -17,17 +17,6 @@ layout(std430, binding = 0) buffer ParticleBuffer {
 uniform vec2 mousePos;
 uniform float deltaTime;
 
-// Function to generate a random color
-vec4 generateRandomColor(float seed) {
-    // Simple random color generation using sine function and seed
-    return vec4(
-        abs(sin(seed * 1.3)),
-        abs(sin(seed * 1.7)),
-        abs(sin(seed * 2.5)),
-        1.0
-    );
-}
-
 float generateRandomLifetime(uint id) {
     float randomValue = fract(sin(float(id) * 78.233 + deltaTime) * 43758.5453123);
     return mix(1.0, 5.0, randomValue); // Lifetime between 1 and 5 seconds
@@ -47,7 +36,7 @@ void main() {
             // Reset particle position, age, and restore opacity
             particles[id].position = mousePos;
             particles[id].age = 0.0;
-            particles[id].lifeTime = 1.0; 
+            particles[id].lifeTime = generateRandomLifetime(id); 
             particles[id].color.a = 1.0; // Restore full opacity
         } else {
             // Update particle position
