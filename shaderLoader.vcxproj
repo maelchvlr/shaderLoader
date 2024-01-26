@@ -71,11 +71,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)\Libraries\glm\glm;$(SolutionDir)\Libraries\glfw\include\GLFW;C:\Users\fufla\Desktop\Artfx\projects\shaderLoader\Libraries\glew\include\GL;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\Libraries\glm\glm;$(SolutionDir)\Libraries\glfw\include\GLFW;$(SolutionDir)\Libraries\glew\include\GL;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\Libraries\glfw\lib-vc2022;$(SolutionDir)\Libraries\glew\lib\Release\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)\Libraries\glm\glm;$(SolutionDir)\Libraries\glfw\include\GLFW;C:\Users\fufla\Desktop\Artfx\projects\shaderLoader\Libraries\glew\include\GL;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\Libraries\glm\glm;$(SolutionDir)\Libraries\glfw\include\GLFW;$(SolutionDir)\Libraries\glew\include\GL;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\Libraries\glfw\lib-vc2022;$(SolutionDir)\Libraries\glew\lib\Release\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
