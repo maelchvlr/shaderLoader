@@ -228,7 +228,7 @@ int main() {
             std::cerr << "deltaTime uniform location not found." << std::endl;
         }
         glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, particleSSBO); // Bind the SSBO to the compute shader
-        glDispatchCompute(NUM_PARTICLES +9/ WORK_GROUP_SIZE, 1, 1); // Dispatch compute shader
+        glDispatchCompute(NUM_PARTICLES / WORK_GROUP_SIZE, 1, 1); // Dispatch compute shader
 
     
 
